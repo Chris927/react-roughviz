@@ -1,6 +1,6 @@
 # react-roughviz
 
-This is ... (TODO)
+This is a thin [React](https://reactjs.org) wrapper around the awesome [roughViz](https://github.com/jwilber/roughViz).
 
 ## Installation
 
@@ -28,3 +28,5 @@ npm i react-roughviz
       roughness={8}
     />
 ```
+
+See it in action here: https://codesandbox.io/s/react-codesandbox-urbsw?fontsize=14
