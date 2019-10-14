@@ -1,0 +1,18 @@
+{
+  "name": "react-roughviz",
+  "version": "0.1.0",
+  "description": "Use https://github.com/jwilber/roughViz in React",
+  "main": "dist",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "roughviz",
+    "viz",
+    "visualisation",
+    "diagrams"
+  ],
+  "author": "chris@uber5.com",
+  "license": "ISC"
+}
