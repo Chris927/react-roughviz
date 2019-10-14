@@ -5,6 +5,7 @@
   "main": "dist",
   "scripts": {
     "start": "react-scripts start",
+    "build": "babel src/lib --out-dir dist --source-maps",
     "test": "jest"
   },
   "keywords": [
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
