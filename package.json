@@ -4,6 +4,7 @@
   "description": "Use https://github.com/jwilber/roughViz in React",
   "main": "dist",
   "scripts": {
+    "start": "react-scripts start",
     "test": "jest"
   },
   "keywords": [
@@ -14,5 +15,31 @@
     "diagrams"
   ],
   "author": "chris@uber5.com",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-react": "^7.6.3",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "^3.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
