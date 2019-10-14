@@ -6,6 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "babel src/lib --out-dir dist --source-maps",
+    "prepublish": "npm run clean && npm run build",
+    "clean": "rimraf dist",
     "test": "jest"
   },
   "keywords": [
@@ -30,7 +32,8 @@
     "prettier": "^1.18.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.2.0",
+    "rimraf": "^3.0.0"
   },
   "browserslist": {
     "production": [
