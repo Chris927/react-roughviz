@@ -30,3 +30,14 @@ npm i react-roughviz
 ```
 
 See it in action here: https://codesandbox.io/s/react-codesandbox-urbsw?fontsize=14
+
+
+## Development
+
+Run it via
+
+```
+npm start
+```
+
+This runs an example app (at http://localhost:3000) via [react-scripts](https://www.npmjs.com/package/react-scripts), you can then edit [the example](./src/index.js) or [the packaged code](./src/lib/index.js).
