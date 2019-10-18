@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import * as rv from 'rough-viz/dist/rough-viz.min'
+import * as rv from 'rough-viz/dist/roughviz.min'
 
 const generateId = prefix => `${prefix}${('' + Math.random()).split('.')[1]}`
 
