@@ -1,6 +1,6 @@
 {
   "name": "react-roughviz",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Use https://github.com/jwilber/roughViz in React",
   "main": "dist",
   "scripts": {
