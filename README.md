@@ -29,7 +29,7 @@ npm i react-roughviz
     />
 ```
 
-See it in action here: https://codesandbox.io/s/react-codesandbox-urbsw?fontsize=14
+See it in action here: https://codesandbox.io/s/react-codesandbox-zmn70
 
 
 ## Development
