@@ -52,6 +52,6 @@
     ]
   },
   "dependencies": {
-    "rough-viz": "^1.0.4"
+    "rough-viz": "^1.0.5"
   }
 }
