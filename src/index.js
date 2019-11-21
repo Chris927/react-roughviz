@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Bar, Pie } from './lib'
+import { Bar, Pie, StackedBar } from './lib'
 
 function App() {
   return <>
@@ -24,6 +24,15 @@ function App() {
         colors={['red', 'orange', 'blue', 'skyblue']}
         roughness={8}
         strokeWidth={3}
+      />
+      <StackedBar
+        data={[
+          {month:'Jan', A:20, B: 5,  C: 10},
+          {month:'Feb', A:25, B: 10, C: 20},
+          {month:'March', A:30, B:50, C:10}
+        ]}
+        labels='month'
+        title='Monthly Revenue'
       />
     </div>
   </>
