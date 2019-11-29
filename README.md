@@ -41,3 +41,13 @@ npm start
 ```
 
 This runs an example app (at http://localhost:3000) via [react-scripts](https://www.npmjs.com/package/react-scripts), you can then edit [the example](./src/index.js) or [the packaged code](./src/lib/index.js).
+
+### Testing
+
+Due to how [roughViz](https://github.com/jwilber/roughViz) accesses the browser environment when rendering, React testing is limited: Testing by rendering to `document.createElement()`, or snapshot testing, won't work.
+
+Integration testing via e.g. [jest-puppeteer](https://www.npmjs.com/package/jest-puppeteer) is possible, though. See ./integration/smoketest.test.js, or run it yourself:
+
+```bash
+npm run test:integration
+```
