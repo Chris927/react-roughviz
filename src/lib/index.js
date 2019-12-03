@@ -5,7 +5,7 @@ const generateId = prefix => `${prefix}${('' + Math.random()).split('.')[1]}`
 
 const wrap = rvComp => ({ prefix, ...props }) => {
   const ref = useRef()
-  const [id] = useState(generateId(prefix || 'roughviz-'))
+  const [ id ] = useState(generateId(prefix || 'roughviz-'))
   useEffect(() => {
     if (ref.current) {
       // since this effect runs only on prop changes,
@@ -17,10 +17,10 @@ const wrap = rvComp => ({ prefix, ...props }) => {
         ...props
       })
     }
-  }, [id, props])
+  }, [ id, props ])
 
   return <div id={id} ref={ref} />
-};
+}
 
 export const Bar = wrap(rv.Bar)
 export const BarH = wrap(rv.BarH)
