@@ -10,8 +10,12 @@ const wrap = rvComp => ({ prefix, ...props }) => {
     if (ref.current) {
       // since this effect runs only on prop changes,
       // it's safe to assume we want to redraw
-      ref.current.childNodes.forEach(node => node.remove())
 
+      // change remove children function
+      while (ref.current.firstChild) {
+        ref.current.removeChild(ref.current.firstChild)
+      }
+      
       new rvComp({
         element: '#' + id,
         ...props
