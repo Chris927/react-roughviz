@@ -7,13 +7,13 @@ const wrap = rvComp => ({ prefix, ...props }) => {
   const ref = useRef()
   const [ id ] = useState(generateId(prefix || 'roughviz-'))
   useEffect(() => {
-    if (ref.current) {
+    const { current: domNode } = ref
+    if (domNode) {
       // since this effect runs only on prop changes,
-      // it's safe to assume we want to redraw
-
-      // change remove children function
-      while (ref.current.firstChild) {
-        ref.current.removeChild(ref.current.firstChild)
+      // it's safe to assume we want to redraw, so we remove all
+      // childNodes (compare https://stackoverflow.com/a/3955238)
+      while (domNode.firstChild) {
+        domNode.removeChild(domNode.firstChild)
       }
       
       new rvComp({
