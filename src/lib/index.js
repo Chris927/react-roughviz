@@ -1,27 +1,29 @@
 import React, { useRef, useState, useEffect } from 'react'
 import * as rv from 'rough-viz/dist/roughviz.min'
 
-const generateId = prefix => `${prefix}${('' + Math.random()).split('.')[1]}`
+let lastId = 0;
+
+const generateId = prefix => `${prefix}${'' + (++lastId)}`
 
 const wrap = rvComp => ({ prefix, ...props }) => {
   const ref = useRef()
-  const [ id ] = useState(generateId(prefix || 'roughviz-'))
+  const [ id ] = useState(generateId(prefix || 'roughviz'))
   useEffect(() => {
-    const { current: domNode } = ref
-    if (domNode) {
-      // since this effect runs only on prop changes,
-      // it's safe to assume we want to redraw, so we remove all
-      // childNodes (compare https://stackoverflow.com/a/3955238)
-      while (domNode.firstChild) {
-        domNode.removeChild(domNode.firstChild)
-      }
-      
+    const { current: node } = ref
+    if (node) {
       new rvComp({
         element: '#' + id,
         ...props
       })
     }
-  }, [ id, props ])
+    return () => {
+      if (node) {
+        while (node.firstChild) {
+          node.removeChild(node.firstChild)
+        }
+      }      
+    }
+  }, [ id, props, ref ])
 
   return <div id={id} ref={ref} />
 }
