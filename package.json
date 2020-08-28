@@ -37,7 +37,7 @@
     "puppeteer": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.3",
     "rimraf": "^3.0.0"
   },
   "browserslist": {
@@ -53,6 +53,6 @@
     ]
   },
   "dependencies": {
-    "rough-viz": "^1.0.5"
+    "rough-viz": "^1.0.6"
   }
 }
